@@ -8,7 +8,7 @@ Ferramenta de gestão do projeto: trello , https://trello.com/b/pcPj8t1B/challen
 
 ### Semana 1: Primeiros passos em Data Science - limpeza dos dados trazidos de uma API
 Principais atividades realizadas: 
-- Leitura de dados json fonte http;
+- Leitura dos dados: formato json fonte http;
 - Normalização de colunas: cada coluna possui um dicionário com dados embutidos, assim, cada uma das colunas foi normalizada usando 'json_normalize'.
 - Concantenação: as colunas normalizadas foram concatenadas para formas o DataFrame 'dados_api'
 - Análise de inconsistência nos dados: foi observado que as colunas 'Churn' e 'Charges Total' possuiam valores em branco. Para isso utilizou-se o df.info() e df.describe(). No entanto ao utilizar a função isnull() não aparecia dados nulos para tais colunas. Solução: utilizando o unique() foi possível identificar qual a str que estava constando nos campos sem valor e assim através da função replace() substituí-los por np.nan. 
